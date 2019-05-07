@@ -60,3 +60,9 @@ h1 {
 #btn:hover {
     opacity: 0.8;
 }
+
+.error {
+    background: orange;
+    padding: 7px;
+    color: #fff;
+}
