@@ -19,6 +19,10 @@ h1 {
     display: inline-block;
     opacity: 0.5;
     cursor: pointer;
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 150px;
 }
 
 .box+.box {
@@ -35,6 +39,10 @@ h1 {
 
 #box_2 {
     background: url('photo_2.jpg');
+}
+
+.selected {
+    opacity: 1;
 }
 
 #btn {
