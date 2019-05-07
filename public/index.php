@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="box" id="box_0" data-id="0"></div>
             <div class="box" id="box_1" data-id="1"></div>
             <div class="box" id="box_2" data-id="2"></div>
-            <input type="hidden" name="answer" id="answer">
+            <input type="hidden" name="answer" id="answer" value="">
         </div>
         <div id="btn">Vote and See Results</div>
     </form>
@@ -47,7 +47,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $('.box').removeClass('selected');
                 $(this).addClass('selected');
                 $('#answer').val($(this).data('id'));
-            })
+            });
+
+            $('#btn').on('click', function() {
+                if ($('#answer').val() === '') {
+                    alert('Choose One!');
+                } else {
+                    $('form').submit();
+                }
+            });
         });
     </script>
 </body>
