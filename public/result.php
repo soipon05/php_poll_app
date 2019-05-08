@@ -10,11 +10,14 @@ try {
     exit;
 }
 
-$results = [
-    0 => 12,
-    1 => 24,
-    2 => 36
-];
+$results = $poll->getResults();
+// var_dump($results);
+// exit;
+// $results = [
+//     0 => 12,
+//     1 => 24,
+//     2 => 36
+// ];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $poll->post();
